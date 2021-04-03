@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combining Selectors</title>
+    <style>
+        span.EWCS{
+            background-color: gold;
+            font-size: larger;
+        }
+        section > span{
+            background-color: springgreen;
+            font-size: smaller;
+            font: italic;
+        }
+        section p{
+            color:blue;
+            width: 100px;
+        }
+        p .bigRed, .bigRed p{
+            color: red;
+            font-size: larger;
+        }
+        article > .ACG{
+            color: gray;
+            text-align: center;
+        }
+        .ACG.bigRed{
+            color: indigo;
+            font-size: larger;
+            text-align: center;
+        }
+        div + p{
+            background-color: chartreuse;
+        }
+        div ~ a{
+            background-color: firebrick;    
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red; text-align:center">Combining Selectors</h1>
+    <section>
+        <h2>Element with Class Selector</h2>
+        <span class="EWCS">This span element has the same class of the next span element.</span>
+        <span class="EWCS">And this span element has the same class of the previous span element.</span>
+    </section>
+    <p class="EWCS">These previous two span have the "Element with Class Selector" associated.</p>
+    <hr>
+    <section>
+        <h2>Child Selector(>)</h2>
+        <span>This span element is directly inside section tag.</span>
+        <div>
+            <span>And this span element is inside section tag, but not directly.</span>
+        </div>
+    </section>
+    <span>This other span is out of section tag.</span>
+    <hr>
+    <section>
+        <h2>Descendant Selector(Space)</h2>
+        <p>This paragraph element is directly inside section tag.</p>
+        <div>
+            <p>And this paragraph element is inside section tag, but not directly.</p>
+        </div>
+    </section>
+    <p>This other paragraph is out of section tag.</p>
+    <hr>
+    <article>
+        <h2>Other examples #1 (Descendant Selector - Element Class - Class Element)</h2>
+        <span class="bigRed">This span element have class "bigRed" associated.</span>
+        <p><span class="bigRed">And this span element also has class "bigRed" associated, but he is inside p element.</span></p>
+        <span class="bigRed"><p>Now this is a paragraph element inside of span element, which has the class "bigRed" associated with it.</p></span>
+        <span><p>And this is a paragraph element inside of span element, which does not have a class associated with it.</p></span>
+    </article>
+    <hr>
+    <article>
+        <h2>Other examples #2(Child Selector - Element > Class)</h2>
+        <div class="ACG"><span>This span element is inside a div element, which have a class "ACG" associated.</span></div>
+        <br>
+        <p><span class="ACG">And this span element also has class "ACG" associated, but he is inside p element.</span></p>
+    </article>
+    <hr>
+    <article>
+        <h2>Class Selector AND Class Selector</h2>
+        <div class="ACG bigRed"><span>This span element is inside of div element, which has two classes "ACG bigRed."</span></div>
+        <div class="bigRed"><span>This span element is inside of div element, which has one class "bigRed".</span></div>
+        <div><span class="ACG"></span>This span element has one class "ACG" and is inside of div element, which does not have any class.</div>
+    </article>
+    <hr>
+    <article>
+        <h2>Adjacent Sibiling Selector(+)</h2>
+        <p>The + selector is used to select an element that is directly after another specific element.</p>
+        <p>The following example selects the first p element that are placed immediately after div elements:</p>
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+        </div>
+          
+        <p>Paragraph 3. After a div.</p>
+        <p>Paragraph 4. After a div.</p>
+          
+        <div>
+            <p>Paragraph 5 in the div.</p>
+            <p>Paragraph 6 in the div.</p>
+        </div>
+          
+        <p>Paragraph 7. After a div.</p>
+        <p>Paragraph 8. After a div.</p>
+          
+    </article>
+    <hr>
+    <article>
+        <h2>General Sibiling Selector(~)</h2>
+        <div>
+            <a>Link 1. After a div.</a>
+            <a>Link 2. After a div.</a>    
+        </div>
+          
+        <a>Link 3. After a div.</a>
+        <a>Link 4. After a div.</a>    
+          
+        <div>
+            <a>Link 5. After a div.</a>
+            <a>Link 6. After a div.</a>    
+        </div>
+          
+        <a>Link 7. After a div.</a>
+        <a>Link 8. After a div.</a>       
+    </article>
+
+</body>
+</html>

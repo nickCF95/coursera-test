@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        header li{
+            list-style: none;
+        }
+        a:link, a:visited{
+            text-decoration:none;
+            background-color:orchid;
+            border: 1px solid pink;
+            color: black;
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 1px;
+        }
+        a:hover, a:active {
+            background-color: slategrey;
+            color: white;
+        }
+        header li:nth-child(3) {
+            font-size: 18px;
+        }
+        section li:nth-child(odd){
+            background-color: tomato;
+            width:200px;
+        }
+        section li:nth-child(2):hover{
+            background-color: black;
+            color: blanchedalmond;
+            width: 200px;
+            cursor: progress;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Selectors</h1>
+    <header>
+        <ul>
+            <li><a href="pseudoSelectors.html">Reload</a></li>
+            <li><a href="selectors.html">Go to Selector explanation</a></li>
+            <li><a href="combiningSelectors.html">Go to combining Selectors explanation</a></li>
+        </ul>
+    </header>
+    <section>
+        <p>A pseudo-class is used to define a special state of an element.</p>
+        <p>For example, it can be used to:</p>
+        <ol>
+            <li>Style an element when a user mouses over it</li>
+            <li>Style visited and unvisited links differently</li>
+            <li>Style an element when it gets focus</li>
+        </ol>   
+    </section>    
+</body>
+</html>
