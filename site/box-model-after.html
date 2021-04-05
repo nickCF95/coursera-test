@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 60px;  /* If this line is uncommented the vertical margin will change  */
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: auto;
+}
+#content {
+  background-color: #90EE90; /* green */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">This 'div' element is constraint by the width and height properties defined in the styles attributes, so it might overflow, but luckiy this won't happen thanks to the 'overflow:auto' style property. 
+  </div>
+</div>
+<div id="box">
+  <div id="content">This other 'div' is constraint too by the same properties, but, it useful to see what happen with the vertical margin between two consecutive 'divs' elements, which are block elements.    
+  </div>
+</div>
+<span id="box" style="display: inline-block;">
+  <span id="content">This 'span' element is contraint in the same way like the other divs elements, but it has other purpose.
+  </span>
+</span>
+<span id="box" style="display: inline-block;">
+  <span id="content">This other 'span' is constraint too by the same properties, but, it useful to see what happen with the margin between two consecutive 'span' elements, which are in-line elements.    
+  </span>
+</span>
+
+
+</body>
+</html>

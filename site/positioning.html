@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div#container{
+            background-color: cornflowerblue;
+            position: relative;
+            width:50%;
+            right: -25%;
+        }
+        h1{
+            margin-bottom: 15px;
+        }
+        p{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+        #p1{
+            background-color: brown;
+            position: relative;
+            top: 65px;
+            right: 50px;
+        }
+        #p2{
+            background-color: chartreuse;
+            position: absolute;/* Out of document Flow, so it ignore all other elements */
+            right: 50%;
+
+        }
+        #p3{
+            background-color: darkgray;
+            position:relative;
+            left: 50%;
+        }
+        #p4{
+            background-color: khaki;
+            position: relative;
+            bottom:65px;
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning</h1>
+    <div id="container">
+        <p id="p1">Párrafo 1</p>
+        <p id="p2">Párrafo 2</p>
+        <p id="p3">Párrafo 3</p>
+        <p id="p4">Párrafo 4</p>
+    </div>
+</body>
+</html>
