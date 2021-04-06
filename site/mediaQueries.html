@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        div{
+            border: 1px solid black;
+            text-align: center;
+        }
+        #div1{
+            width: 30%;
+            position:absolute;
+            right:50%;
+
+        }
+        #div2{
+            width: 30%;
+            position: absolute;
+            left:50%;
+        }
+        @media (min-width: 1200px){
+            #div1,#div2{
+                width: 48%;
+                float:left;
+                margin: 0 1% 0 1%; /* Top, Left, Bottom, Right */
+            }
+        }
+        @media (min-width: 800px) and (max-width: 1199.9px){
+            #div1,#div2{
+                width: 40%;
+                float:left;
+                margin: 0 2.5% 0 2.5%;
+            }
+        }
+        @media (min-width: 451px) and (max-width: 799.9px){
+            #div1,#div2{
+                width: 32%;
+                float:left;
+                margin: 0 9% 0 9%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Queries</h1>
+    <div id="div1" style="background-color: burlywood;">Box created by a div tag, with id 1.</div>
+    <div id="div2" style="background-color: coral;">Box created by a div tag, with id 2.</div>
+</body>
+</html>
