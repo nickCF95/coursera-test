@@ -12,11 +12,12 @@ div.container > h1{
   font-weight: bold;
   margin: 15px 0 30px;
 }
-div.row > div > h2{
+div.row  h2{
   font-size: 1.5rem;
   font-weight: bold;
 }
 p{
+  padding: 10px 10px;
   font-size: 1rem;
   font-weight: 500;
 }
