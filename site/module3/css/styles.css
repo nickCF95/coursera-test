@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  font-size:16px;
+}
+body{
+  font-family: 'Oxygen', sans-serif;
+}
+div.container > h1{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 0 30px;
+}
+div.row > div > h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+div.row > div{
+  background-color: gray;
+  margin: 15px 0;
+}
+.navbar{
+  border: 5px solid #010008;
+}
+.navbar-brand{
+  font-size:2rem;
+}
+.dropdown-divider{
+  color: #fff;
+}
+button.navbar-toggler:hover{
+  box-shadow: 0 0 0 .25rem;
+}
+@media (max-width:575.9px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 80%;
+  }
+}
