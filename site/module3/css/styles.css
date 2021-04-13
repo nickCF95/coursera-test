@@ -20,7 +20,7 @@ p{
   font-size: 1rem;
   font-weight: 500;
 }
-div.row > div{
+div.row  div{
   background-color: gray;
   margin: 15px 0;
 }
